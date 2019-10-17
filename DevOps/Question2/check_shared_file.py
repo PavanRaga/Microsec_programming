@@ -3,7 +3,7 @@ import urllib
 import os
 import time
 
-shared_file = "../Question1/shared_file/time.txt"
+shared_file = "/tmp/shared_file/time.txt"
 
 while True:
     cur_time = os.stat(shared_file)
@@ -26,7 +26,8 @@ while True:
             f.write(str(cur_time.st_mtime))
             f.seek(0,0)
         else:
-            print("not modified")
+            #print("not modified")
+            pass
     #yield
     time.sleep(1)
         
