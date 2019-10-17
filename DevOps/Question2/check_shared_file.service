@@ -1,0 +1,14 @@
+# /etc/systemd/system/check_shared_file.service
+
+[Unit]
+Description=file to check the modification of shared file
+Requires=docker.service
+After=docker.service
+
+[Service]
+WorkingDirectory=/home/pavan/Softwares/DevOps/Question2
+ExecStart=/usr/bin/python check_shared_file.py
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

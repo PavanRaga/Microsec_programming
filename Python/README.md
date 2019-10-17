@@ -1,0 +1,1 @@
+Run "sudo python3 install_systemd.py" -> This will install the service at systemd path and start the service

@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  write_time:
+    container_name: write_time
+    build: write_time/.
+    volumes:
+      - ./shared_file:/app
+  read_time:
+    container_name: read_time
+    build: read_time/.
+    volumes:
+      - ./shared_file:/app
+    ports:
+       - 5000:5000

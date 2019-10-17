@@ -1,0 +1,12 @@
+# /etc/systemd/system/myserver.service
+
+[Unit]
+Description=Socket server listing on 2999 port
+
+[Service]
+WorkingDirectory=/home/pavan/Softwares/microsec/Python
+ExecStart=/usr/bin/python3 server.py
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
